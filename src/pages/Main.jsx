@@ -9,9 +9,11 @@ const Main = () => {
             <div className="content-wrap">
                 <Text label={'What’s the Plan for Today?'} />
 
-                <Input onClick={() => { }} btnType={'update'} />
-
-                <TodoItem title={'Buy milk'} />
+                <Input onClick={() => { }} label={'Add'} />
+                <div className="item-wapper">
+                    <TodoItem title={'Buy milk'} />
+                    <TodoItem title={'Call katherine about the Trip'} />
+                </div>
             </div>
 
 

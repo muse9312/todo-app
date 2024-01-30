@@ -63,17 +63,27 @@
         font-size: 18px;
         font-weight: 700;
     }
+}
 
-    .btn-update {
-        background: #d129ec;
-    }
+.btn.update {
+    width: 77px;
+    background: #d129ec;
+}
+
+//  todoItem
+
+.item-wapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+    margin-top: 39px;
 }
 
 .item {
     display: flex;
     justify-content: space-between;
     padding: 19px 6px 19px 12px;
-    margin-top: 39px;
+
     border-radius: 15px;
     background: #ffffff;
 
@@ -91,12 +101,21 @@
     &-rgcontent {
         display: flex;
         gap: 0 7px;
-
-        button {
-            border: none;
-            cursor: pointer;
-            background: none;
-            padding: 0;
-        }
     }
+
+    button {
+        border: none;
+        cursor: pointer;
+        background: none;
+        padding: 0;
+    }
+}
+
+.item.checked {
+    background: #f7f7f7;
+}
+
+.title.checked {
+    color: #787878;
+    text-decoration: line-through;
 }
