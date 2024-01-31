@@ -4,9 +4,10 @@ import './styles/page.scss'
 
 function App() {
   return (
-    <div className="wrap">
-      <Main />
-    </div>
+
+
+    <Main />
+
   );
 }
 
