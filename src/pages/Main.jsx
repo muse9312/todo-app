@@ -14,6 +14,26 @@ const Main = () => {
                 <div className="item-wapper">
                     <TodoItem title={"Buy milk"} />
                     <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
+                    <TodoItem title={"Call katherine about the Trip"} />
 
                 </div>
             </div>
