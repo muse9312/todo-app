@@ -4,7 +4,6 @@ const Text = ({ label }) => {
     return (
         <div className="text">
             <span >{label}</span>
-
         </div>
     )
 }

@@ -15,9 +15,11 @@ const TodoItem = ({ title }) => {
 
 
     return (
+        // item checked
 
-        <div className={isChecked ? "item checked" : "item"}>
-            <div className="item-lfcontent">
+        // <div className={isChecked ? "item checked" : "item"}>
+        <div className={`item ${isChecked ? 'checked' : ''}`}>
+            <div className="todo-list__item--lfcontent">
                 <button type="button" className="icon-button" onClick={handleChecked}>
                     {isChecked ? <IoCheckbox size={20} /> : <MdCheckBoxOutlineBlank size={20} />}
                 </button>
