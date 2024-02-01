@@ -4,7 +4,7 @@ import Input from "../components/Input";
 import TodoItem from "../components/TodoItem";
 import { ItemList } from "../data/common";
 
-const Main = () => {
+const Home = () => {
     return (
         <div className="wrap">
             <div className="content">
@@ -14,9 +14,12 @@ const Main = () => {
                         <Input onClick={() => { }} label={"Update"} />
                     </div>
                     <div className="item-wapper">
-                        {ItemList.map((item) => (
-                            <TodoItem key={item.id} title={item.title} />
-                        ))}
+                        <div className="test">
+                            {ItemList.map((item) => (
+                                <TodoItem key={item.id} title={item.title} />
+                            ))}
+                        </div>
+
 
                     </div>
                 </div>
@@ -26,4 +29,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default Home;

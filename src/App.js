@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './pages/Main';
+import Home from './pages/Home';
 import './styles/page.scss'
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/update" element={<Main />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/update" element={<Home />} />
       </Routes>
     </BrowserRouter>
 
