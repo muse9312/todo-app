@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Input = ({ label, onClick }) => {
+const Input = ({ label, onChange, onClick }) => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (val) => {
+    onChange && setValue(val);
+  };
+
   return (
     <div className='input-wrap'>
-      <input type='text' className='input' placeholder='Write a new todo'></input>
+      <input type='text' className='input' onChange={handleChange} placeholder='Write a new todo'></input>
       <button
         type='button'
         className={label === 'Update' ? 'btn update' : 'btn'}

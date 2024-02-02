@@ -4,18 +4,14 @@ import Input from '../components/Input';
 import TodoItem from '../components/TodoItem';
 import { ItemList } from '../data/common';
 
-const Home = () => {
-  const [value, setValue] = useState('');
-
-  console.log(value);
-
+const Update = () => {
   return (
     <div className='wrap'>
       <div className='content'>
         <div className='content-wrap'>
           <div className='content-top'>
             <Text label={'What’s the Plan for Today?'} />
-            <Input onClick={() => {}} onChange={(val) => setValue(val)} label={'Add'} />
+            <Input onClick={() => {}} label={'Update'} />
           </div>
           <div className='item-wapper'>
             <div className='test'>
@@ -30,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Update;
