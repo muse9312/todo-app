@@ -17,13 +17,13 @@ const Home = () => {
             <Text label={'What’s the Plan for Today?'} />
             <Input onClick={() => {}} onChange={(val) => setValue(val)} label={'Add'} />
           </div>
-          <div className='item-wapper'>
-            <div className='test'>
+          <ul className='item-wapper'>
+            <li className='test'>
               {ItemList.map((item) => (
                 <TodoItem key={item.id} title={item.title} />
               ))}
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

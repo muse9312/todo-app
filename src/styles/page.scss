@@ -91,7 +91,7 @@
   display: flex;
   justify-content: space-between;
   padding: 19px 6px 19px 12px;
-
+  margin: unset;
   border-radius: 15px;
   background: #ffffff;
 
@@ -139,9 +139,14 @@
 
 .item.checked {
   background: #f7f7f7;
+
+  ul {
+    margin: unset;
+  }
 }
 
 .title.checked {
   color: #787878;
+
   text-decoration: line-through;
 }
