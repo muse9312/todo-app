@@ -15,7 +15,7 @@ const Home = () => {
         <div className='content-wrap'>
           <div className='content-top'>
             <Text label={'What’s the Plan for Today?'} />
-            <Input onClick={() => {}} label={'Add'} />
+            <Input onClick={() => {}} onChange={(val) => setValue(val)} label={'Add'} />
           </div>
           <ul className='item-wapper'>
             <li className='test'>
