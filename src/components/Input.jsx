@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Input = ({ label, onChange, onClick }) => {
+const Input = ({ label, onChange, onSubmit }) => {
   const [value, setValue] = useState('');
 
   const handleChange = (val) => {
@@ -13,8 +13,8 @@ const Input = ({ label, onChange, onClick }) => {
       <button
         type='button'
         className={label === 'Update' ? 'btn update' : 'btn'}
-        onClick={() => {
-          onClick();
+        onSubmit={() => {
+          onSubmit();
         }}>
         <span>{label}</span>
       </button>
