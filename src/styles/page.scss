@@ -1,3 +1,4 @@
+// home.jsx =================================================================
 .wrap {
   display: flex;
   justify-content: center;
@@ -16,6 +17,7 @@
   }
 }
 
+// Text.jsx =================================================================
 .text {
   display: flex;
   justify-content: center;
@@ -27,6 +29,8 @@
   }
 }
 
+// input.jsx =================================================================
+
 .input-wrap {
   display: flex;
   justify-content: flex-end;
@@ -36,7 +40,9 @@
   width: 100%;
   padding: 18px 22px;
   border: none;
-  border-radius: 45px;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+  margin-right: 55px;
   &:focus {
     outline: none;
   }
@@ -50,14 +56,13 @@
 
 .btn {
   position: absolute;
-  width: 60px;
+  padding: 0 12px;
   height: 52px;
   border: none;
   border-top-right-radius: 45px;
   border-bottom-right-radius: 45px;
   background: #07d1ad;
   cursor: pointer;
-
   span {
     color: #ffffff;
     font-size: 18px;
@@ -65,7 +70,11 @@
   }
 }
 
-//  todoItem
+.update {
+  background: #d129ec;
+}
+
+// TodoList.jsx =================================================================
 
 .item-wapper {
   display: flex;
@@ -73,7 +82,7 @@
   padding: 0 33px 22px;
   margin-top: 39px;
 
-  .test {
+  .itembox {
     display: flex;
     flex-direction: column;
     gap: 12px 0;
@@ -118,24 +127,6 @@
     padding: 0;
   }
 }
-
-// .todo-list {
-//     // list 묶음 스타일
-//     &__item {
-//         // item 스타일
-//         &-lfcontent {
-//             display: flex;
-//             gap: 0 11px;
-
-//             span {
-//                 color: #2b2b2b;
-//                 font-size: 18px;
-//                 font-weight: 500;
-//             }
-//         }
-//     }
-
-// }
 
 .item.checked {
   background: #f7f7f7;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Text from '../components/Text';
 import Input from '../components/Input';
 import TodoItem from '../components/TodoItem';
@@ -14,7 +14,7 @@ const Update = () => {
             <Input onClick={() => {}} label={'Update'} />
           </div>
           <div className='item-wapper'>
-            <div className='test'>
+            <div className='itembox'>
               {ItemList.map((item) => (
                 <TodoItem key={item.id} title={item.title} />
               ))}
