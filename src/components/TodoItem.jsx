@@ -5,8 +5,9 @@ import { MdCheckBoxOutlineBlank } from 'react-icons/md';
 import { IoCheckbox } from 'react-icons/io5';
 import { TbEditCircle } from 'react-icons/tb';
 
-const TodoItem = ({ id, title, onDelete }) => {
+const TodoItem = ({ data, id, title, onDelete, onCheck }) => {
   const navigate = useNavigate();
+  // const { id, title } = data;
 
   const [isChecked, setIsChecked] = useState(false);
   const handleChecked = () => {
@@ -18,12 +19,19 @@ const TodoItem = ({ id, title, onDelete }) => {
     navigate('/update');
   };
 
+  // check 되면 true 넘겨주기
+  // const onCheck = () => {
+  //   if (isChecked) {
+  //     return true;
+  //   }
+  // };
+
   const colorChange = isChecked ? 'gray' : '';
 
   return (
     <div className={isChecked ? 'item title checked  ' : 'item' || 'title'}>
       <div className='item-lfcontent'>
-        <button type='button' className='icon-button' onClick={handleChecked}>
+        <button type='button' className='icon-button' onClick={handleChecked} checked={() => onCheck(isChecked && true)}>
           {isChecked ? <IoCheckbox size={20} /> : <MdCheckBoxOutlineBlank size={20} />}
         </button>
         <span className={'title'}>{title}</span>

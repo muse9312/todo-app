@@ -5,8 +5,14 @@ import TodoItem from '../components/TodoItem';
 import { ItemList } from '../data/common';
 
 const Home = () => {
+  // input value
   const [value, setValue] = useState('');
   console.log(value);
+
+  // check true
+  const [checkValue, setCheckValue] = useState('');
+
+  console.log(checkValue);
 
   const [items, setItems] = useState(ItemList);
 
@@ -25,7 +31,7 @@ const Home = () => {
           <ul className='item-wapper'>
             <li className='itembox'>
               {items.map((item) => (
-                <TodoItem key={item.id} id={item.id} title={item.title} onDelete={handleDelete} />
+                <TodoItem key={item.id} id={item.id} title={item.title} onCheck={(check) => setCheckValue(check)} onDelete={handleDelete} />
               ))}
             </li>
           </ul>
