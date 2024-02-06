@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 
 const Input = ({ label, onSubmit }) => {
   const [value, setValue] = useState('');
+
   console.log(value);
+
   const handleChange = (e) => {
     setValue(e.target.value);
   };
