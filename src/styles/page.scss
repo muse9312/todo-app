@@ -1,3 +1,5 @@
+@import 'reset.scss';
+
 // home.jsx =================================================================
 .wrap {
   display: flex;
@@ -33,16 +35,13 @@
 
 .input-wrap {
   display: flex;
-  justify-content: flex-end;
+  border-radius: 45px;
+  overflow: hidden;
 }
 
 .input {
   width: 100%;
   padding: 18px 22px;
-  border: none;
-  border-top-left-radius: 45px;
-  border-bottom-left-radius: 45px;
-  margin-right: 55px;
   &:focus {
     outline: none;
   }
@@ -55,14 +54,8 @@
 }
 
 .btn {
-  position: absolute;
   padding: 0 12px;
-  height: 52px;
-  border: none;
-  border-top-right-radius: 45px;
-  border-bottom-right-radius: 45px;
   background: #07d1ad;
-  cursor: pointer;
   span {
     color: #ffffff;
     font-size: 18px;
@@ -126,18 +119,17 @@
     background: none;
     padding: 0;
   }
-}
 
-.item.checked {
-  background: #f7f7f7;
+  // 김다솜 추가
+  &.checked {
+    background: #f7f7f7;
 
-  ul {
-    margin: unset;
+    ul {
+      margin: unset;
+    }
+    .title {
+      color: #787878;
+      text-decoration: line-through;
+    }
   }
-}
-
-.title.checked {
-  color: #787878;
-
-  text-decoration: line-through;
 }
