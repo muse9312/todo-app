@@ -9,18 +9,20 @@ const Input = ({ label, onSubmit }) => {
     setValue(e.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('오똑하지', value);
     onSubmit(value);
     setValue('');
   };
 
   return (
-    <div className='input-wrap'>
+    <form onSubmit={handleSubmit} className='input-wrap'>
       <input type='text' className={'input'} value={value} onChange={handleChange} placeholder='Write a new todo'></input>
-      <button type='button' className={label === 'Update' ? 'btn update' : 'btn'} onClick={handleSubmit}>
+      <button type='submit' className={label === 'Update' ? 'btn update' : 'btn'}>
         <span>{label}</span>
       </button>
-    </div>
+    </form>
   );
 };
 

@@ -90,6 +90,8 @@
 //
 
 .item {
+  $this: &;
+
   display: flex;
   justify-content: space-between;
   padding: 19px 6px 19px 12px;
@@ -100,11 +102,22 @@
   &-lfcontent {
     display: flex;
     gap: 0 11px;
+    color: #2b2b2b;
+    font-size: 18px;
+    font-weight: 500;
 
-    span {
-      color: #2b2b2b;
-      font-size: 18px;
-      font-weight: 500;
+    &__checkbox {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 0 12px;
     }
   }
 
@@ -122,19 +135,13 @@
 
   // 김다솜 추가
   &.checked {
-    background: #f7f7f7;
-
+    opacity: 0.6;
     ul {
       margin: unset;
     }
-    .title {
+    #{$this}-lfcontent__title {
       color: #787878;
       text-decoration: line-through;
     }
   }
-}
-
-.title.checked {
-  color: #787878;
-  text-decoration: line-through;
 }

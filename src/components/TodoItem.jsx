@@ -26,15 +26,24 @@ const TodoItem = ({ data, id, title, onDelete, onCheck }) => {
   //   }
   // };
 
+  const handleChange = (e) => {
+    setIsChecked(e.target.checked);
+  };
+
   const colorChange = isChecked ? 'gray' : '';
 
   return (
-    <div className={isChecked ? 'item checked' : 'item'}>
+    <div className={`item ${isChecked ? 'checked' : ''}`}>
       <div className='item-lfcontent'>
-        <button type='button' className='icon-button' onClick={handleChecked} checked={() => onCheck(isChecked && true)}>
+        {/* <button type='button' className='icon-button' onClick={handleChecked} checked={() => onCheck(isChecked && true)}>
           {isChecked ? <IoCheckbox size={20} /> : <MdCheckBoxOutlineBlank size={20} />}
-        </button>
-        <span className={'title'}>{title}</span>
+        </button> */}
+        {/* <span className={'title'}>{title}</span> */}
+        <input type='checkbox' className='item-lfcontent__checkbox' id={id} onChange={handleChange} />
+        <label htmlFor={id} className='item-lfcontent__title'>
+          {isChecked ? <IoCheckbox size={20} /> : <MdCheckBoxOutlineBlank size={20} />}
+          {title}
+        </label>
       </div>
 
       <div className='item-rgcontent'>

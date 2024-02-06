@@ -3,11 +3,11 @@ import Text from '../components/Text';
 import Input from '../components/Input';
 import TodoItem from '../components/TodoItem';
 import { ItemList } from '../data/common';
+import { useEffect } from 'react';
 
 const Home = () => {
   // input value
   const [value, setValue] = useState('');
-  console.log(value);
 
   // check true
   const [checkValue, setCheckValue] = useState('');
@@ -19,6 +19,10 @@ const Home = () => {
   const handleDelete = (id) => {
     setItems(items.filter((item) => item.id !== id));
   };
+
+  useEffect(() => {
+    console.log(value);
+  }, [value]);
 
   return (
     <div className='wrap'>
