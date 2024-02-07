@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Text from '../components/Text';
-import Input from '../components/Input';
+import TodoForm from '../components/TodoForm';
 import TodoItem from '../components/TodoItem';
 import { ItemList } from '../data/common';
 import { useEffect } from 'react';
@@ -30,7 +30,7 @@ const Home = () => {
         <div className='content-wrap'>
           <div className='content-top'>
             <Text label={'What’s the Plan for Today?'} />
-            <Input onClick={() => {}} onSubmit={(val) => setValue(val)} label={'Add'} />
+            <TodoForm onClick={() => {}} onSubmit={(val) => setValue(val)} label={'Add'} />
           </div>
           <ul className='item-wapper'>
             <li className='itembox'>

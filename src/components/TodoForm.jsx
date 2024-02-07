@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
-const Input = ({ label, onSubmit }) => {
+const TodoForm = ({ label, onSubmit }) => {
   const [value, setValue] = useState('');
-
-  console.log(value);
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -26,4 +24,4 @@ const Input = ({ label, onSubmit }) => {
   );
 };
 
-export default Input;
+export default TodoForm;
