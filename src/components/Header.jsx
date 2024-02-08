@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Text = ({ label }) => {
+const Header = ({ title }) => {
   return (
     <div className='text'>
-      <span>{label}</span>
+      <span>{title}</span>
     </div>
   );
 };
 
-export default Text;
+export default Header;

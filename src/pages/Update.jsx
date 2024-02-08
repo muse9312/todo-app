@@ -1,8 +1,8 @@
 import React from 'react';
-import Text from '../components/Text';
 import TodoItem from '../components/TodoItem';
 import { ItemList } from '../data/common';
 import TodoForm from '../components/TodoForm';
+import Header from '../components/Header';
 
 const Update = () => {
   return (
@@ -10,7 +10,7 @@ const Update = () => {
       <div className='content'>
         <div className='content-wrap'>
           <div className='content-top'>
-            <Text label={'What’s the Plan for Today?'} />
+            <Header title={'What’s the Plan for Today?'} />
             <TodoForm onClick={() => {}} label={'Update'} />
           </div>
           <div className='item-wapper'>

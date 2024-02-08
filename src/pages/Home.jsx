@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Text from '../components/Text';
 import TodoForm from '../components/TodoForm';
 import TodoItem from '../components/TodoItem';
 import { ItemList } from '../data/common';
 import { useEffect } from 'react';
+import Header from '../components/Header';
 
 const Home = () => {
   // input value
@@ -29,7 +29,7 @@ const Home = () => {
       <div className='content'>
         <div className='content-wrap'>
           <div className='content-top'>
-            <Text label={'What’s the Plan for Today?'} />
+            <Header title={'What’s the Plan for Today?'} />
             <TodoForm onClick={() => {}} onSubmit={(val) => setValue(val)} label={'Add'} />
           </div>
           <ul className='item-wapper'>
